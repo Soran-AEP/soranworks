@@ -168,7 +168,7 @@ li::before{content:"";position:absolute;left:0;top:.62em;width:.45em;height:.45e
 <div class="c3">
 <a class="ci rv" href="mailto:soranworks@gmail.com"><b>Email</b><span>soranworks@gmail.com</span></a>
 <a class="ci rv" style="--d:.1s" href="https://www.tiktok.com/@sor4aan" target="_blank" rel="noopener"><b>TikTok</b><span>sor4aan</span></a>
-<a class="ci rv" style="--d:.2s" href="https://www.instagram.com/sor4an_." target="_blank" rel="noopener"><b>Instagram</b><span>sor4an_.</span></a>
+<a class="ci rv" style="--d:.2s" href="https://linktr.ee/soranworks" target="_blank" rel="noopener"><b>Linktree</b><span>soranworks</span></a>
 </div>
 <div class="bg rv"><svg viewBox="0 0 3408 1109" role="img" aria-label="Soran Works"><use href="#lg"/></svg><p class="tg">Junior Motion Designer - Graphic Designer - L2D Animator</p></div>
 <div class="rule"></div>
@@ -188,6 +188,45 @@ li::before{content:"";position:absolute;left:0;top:.62em;width:.45em;height:.45e
    Menambah karya: cukup tambah judul baru di daftar t:[...] kategori terkait.
    Ukuran px tiap karya diatur di SZ (judul:[lebar,tinggi]); yang tidak ada di SZ: Design dianggap 1080x1920, kategori lain 1920x1080. Layout menyesuaikan otomatis. */
 const $=(s,r=document)=>r.querySelector(s),p2=n=>String(n).padStart(2,'0'),ED=/[?&]edit/.test(location.search);
+/* ===== DROPBOX =====
+   Isi link Dropbox tiap file di sini (klik kanan file di Dropbox > Copy link). Contoh:
+   'videos/lm-13.mp4':'https://www.dropbox.com/scl/fi/xxxx/lm-13.mp4?rlkey=xxxx&dl=0'
+   'thumbs/lm-13.jpg':'https://www.dropbox.com/scl/fi/xxxx/lm-13.jpg?rlkey=xxxx&dl=0'
+   Akhiran dl=0 otomatis diubah jadi raw=1. File yang tidak diisi tetap dibaca dari folder videos/ dan thumbs/ biasa. */
+const DBX={
+'videos/an-01.mp4':'https://www.dropbox.com/scl/fi/4b2s86dzhahe2h7y9zrug/an-01.mp4?rlkey=i1wj6f6ph0y7ef42vy8izj743&st=rkuxrq1k&dl=0',
+'videos/an-02.mp4':'https://www.dropbox.com/scl/fi/d7oiyo94teperp5485y9k/an-02.mp4?rlkey=30bsqsqb4934vtrk6udwsvyeo&st=08cpcidd&dl=0',
+'videos/an-04.mp4':'https://www.dropbox.com/scl/fi/bjfbuaz4h09liwdzkglgn/an-04.mp4?rlkey=ij5878g1mlw8v9y6uve55l9sg&st=1tjv1i4d&dl=0',
+'videos/an-05.mp4':'https://www.dropbox.com/scl/fi/6gmq51xuqf2at2ozb5qun/an-05.mp4?rlkey=mte6gdwuvwrrqtgybpn6l1725&st=3yp0xur6&dl=0',
+'videos/an-06.mp4':'https://www.dropbox.com/scl/fi/2cpzasyzos4znk6s0cbod/an-06.mp4?rlkey=32u40ht93zsbgrx31lsax1xo3&st=lc2d4ge3&dl=0',
+'videos/lm-01.mp4':'https://www.dropbox.com/scl/fi/kpcvo80syc2jano6bp2rg/lm-01.mp4?rlkey=pe09tza77epkclo5mlkfa7mpv&st=qifytd2f&dl=0',
+'videos/lm-02.mp4':'https://www.dropbox.com/scl/fi/10aaljfupj24g03i2x4w0/lm-02.mp4?rlkey=8c9jw8g0kl4tpv8wyznch1lu4&st=aiuepm9z&dl=0',
+'videos/lm-03.mp4':'https://www.dropbox.com/scl/fi/k8g1eiyaildyt33wqmklj/lm-03.mp4?rlkey=440zj5t928sdb7ae3e3aqf3rs&st=kpbbef7j&dl=0',
+'videos/lm-04.mp4':'https://www.dropbox.com/scl/fi/ch5xsle4mw3d2tbhu1mx3/lm-04.mp4?rlkey=z64rqnru66ml34k056x5a2vhg&st=8mzgsbv9&dl=0',
+'videos/lm-05.mp4':'https://www.dropbox.com/scl/fi/t3zeux621g0eago7nsz23/lm-05.mp4?rlkey=d4uuvfq6cdb8rn7silhckmx5s&st=obzh0j1k&dl=0',
+'videos/lm-06.mp4':'https://www.dropbox.com/scl/fi/hdhh00tjmhsdsi9pw6f07/lm-06.mp4?rlkey=0wlhpen4t4701dqrv9ytdiml0&st=yjrty188&dl=0',
+'videos/lm-07.mp4':'https://www.dropbox.com/scl/fi/z8gbfvefwn5fjlm6su2ec/lm-07.mp4?rlkey=ua5e2pvthhn8cdv0ghh2delfw&st=oo8sxo7h&dl=0',
+'videos/lm-08.mp4':'https://www.dropbox.com/scl/fi/d725v9uk085h10kk9rq8f/lm-08.mp4?rlkey=3vdc7f3yorxl4phpkmmcp9gqr&st=c1e32sta&dl=0',
+'videos/lm-09.mp4':'https://www.dropbox.com/scl/fi/6ukwc362an9xtj9dnjzfi/lm-09.mp4?rlkey=ipqmcdovcpxe3wa9g1hffsbva&st=m1wwik6d&dl=0',
+'videos/lm-10.mp4':'https://www.dropbox.com/scl/fi/gx2553de501jwi7y678c4/lm-10.mp4?rlkey=lul8o0gjso4rodyorg3n6h470&st=c212pcms&dl=0',
+'videos/lm-11.mp4':'https://www.dropbox.com/scl/fi/38tuqqzc1tr2u7y0wuxl0/lm-11.mp4?rlkey=unx8l8vwzm6x42dae33lprsmk&st=10p80e7j&dl=0',
+'videos/lm-12.mp4':'https://www.dropbox.com/scl/fi/evb3ihyybdktaemro6lwi/lm-12.mp4?rlkey=68m5oh9zmhjnx1yox61c91hjl&st=g1jp27ly&dl=0',
+'videos/lm-13.mp4':'https://www.dropbox.com/scl/fi/kt4gtp09q21ywhbl35zr3/lm-13.mp4?rlkey=wmhyqgr5wz8f0v8zonfzsrmdk&st=r4n47cum&dl=0',
+'videos/lm-14.mp4':'https://www.dropbox.com/scl/fi/0015jh1vgy9bb2qv7ugly/lm-14.mp4?rlkey=fal3ok7az28a94b9vjl4w2l6g&st=sudm1fnr&dl=0',
+'videos/lm-15.mp4':'https://www.dropbox.com/scl/fi/noqvtctcff1v85l4rlv1n/lm-15.mp4?rlkey=pwlg38mn1x0cervob4xncl3g7&st=sigi41vc&dl=0',
+'videos/lm-16.mp4':'https://www.dropbox.com/scl/fi/ll7ve5ut0kw7fq1pw31je/lm-16.mp4?rlkey=tfmuh24vxldfdl624051llphs&st=ytl3dnry&dl=0',
+'videos/lm-17.mp4':'https://www.dropbox.com/scl/fi/3w8b4jzqgzo7fi26hq4t4/lm-17.mp4?rlkey=0dywomzozq3rxcdh0ka77u57i&st=ixnk1ht7&dl=0',
+'videos/lm-18.mp4':'https://www.dropbox.com/scl/fi/03i2x8smlqu8ww08y9sk6/lm-18.mp4?rlkey=bslftam980yve6b45itzvk87d&st=g6zufz4v&dl=0',
+'videos/mg-01.mp4':'https://www.dropbox.com/scl/fi/zxdp06bja987kfbympx3m/mg-01.mp4?rlkey=2yilj48t1u5f01fyef0ak7n4c&st=fuodtcf2&dl=0',
+'videos/mg-03.mp4':'https://www.dropbox.com/scl/fi/ocud1gzf73636n5xw6yy1/mg-03.mp4?rlkey=1h6f977sncuu8kg5embcimbx0&st=7isnusa0&dl=0',
+'videos/mg-04.mp4':'https://www.dropbox.com/scl/fi/bbv6t65dxt5t26490oegr/mg-04.mp4?rlkey=9wkfkkl0yxahusv9yyl7za52r&st=piq89cia&dl=0',
+'videos/mg-05.mp4':'https://www.dropbox.com/scl/fi/uae7i52ihjpx9j720gdb2/mg-05.mp4?rlkey=nek3tgqheg6vpnmnr2tbghhko&st=c0mr9dbo&dl=0',
+'videos/mg-06.mp4':'https://www.dropbox.com/scl/fi/13tp0r5gpk2y4xtn9b21a/mg-06.mp4?rlkey=efdbkwnd94cuq3ckwkv6i71j7&st=g2t2972e&dl=0',
+'videos/mg-07.mp4':'https://www.dropbox.com/scl/fi/wchvcann7c248xca6po8s/mg-07.mp4?rlkey=ksd3g58v342ffuigespcm3bp5&st=cnkjunw7&dl=0',
+'videos/mg-08.mp4':'https://www.dropbox.com/scl/fi/bdt7itgvprixeei0ogqyi/mg-08.mp4?rlkey=ck9b00wpj5dbfr1p1ulc71zt7&st=0dp0arsz&dl=0',
+'videos/mg-09.mp4':'https://www.dropbox.com/scl/fi/8kx3jdcjp249a7nnbiixl/mg-09.mp4?rlkey=g6ojl64fsu4xguywm6xbr8vah&st=htf8096n&dl=0'
+};
+const U=f=>{const u=DBX[f]||f;return /dropbox\.com/.test(u)?(/[?&]dl=\d/.test(u)?u.replace(/([?&])dl=\d/,'$1raw=1'):u+(u.includes('?')?'&':'?')+'raw=1'):u};
 const L=['Pixel','Fierce and Free','Good Vibes','Come and Learn','Digital Appocalypse','Faster Clubs','Baked','Creative Culture','Orbit Space','Raw Talent','Dream Big','Overdrive','Forget Everything','Space Bound','Youth Culture','Matriks Innovation','Outer Studio'].map(n=>n+' - Animation');
 const CATS=[
 {k:'motion',n:'Motion Graphic',id:'mg',cols:4,t:['Bumper Opening - Jurnalis Arjuna','Motion Design Pinterest - SaaS Style','Ichika Hoshino - MV SOS (Remake)','Elaina Typography - Penjaga Hati','Furina Motion Graphic - Malu Malu','Yori Asanagi - Difference','Furina - Just My Type','Jinshi - Masa Lalu','Ichika Hoshino Motion Graphic - Malam Minggu']},
@@ -211,7 +250,7 @@ $('#tl').innerHTML=TL.map((t,i)=>`<div class="rv" style="--d:${i%3*.08}s"><div c
 const g=$('#g'),wk=$('#wk'),md=$('#md'),mb=$('#mb'),mt=$('#mt'),mx=$('#mx');
 const sz=(t,c)=>SZ[[].concat(t)[0]]||(c.img?[1080,1920]:[1920,1080]);
 const card=(c,i,j)=>{const a=[].concat(c.t[j]),n=c.id+'-'+p2(j+1),s=sz(c.t[j],c);
- return `<div class="rv" style="--d:${j%6*.06}s"><button class="cb" data-c="${i}" data-j="${j}"><span class="th" style="--ar:${s[0]}/${s[1]}"><img src="thumbs/${n}.jpg" alt="" loading="lazy" onerror="this.remove()">${c.img?'':'<i class="pl"></i>'}</span><span class="ct">${a[0]}</span>${ED?`<span class="fn">thumbs/${n}.jpg${c.img?'':' · videos/'+n+'.mp4'}</span>`:''}</button></div>`};
+ return `<div class="rv" style="--d:${j%6*.06}s"><button class="cb" data-c="${i}" data-j="${j}"><span class="th" style="--ar:${s[0]}/${s[1]}"><img src="${U('thumbs/'+n+'.jpg')}" alt="" loading="lazy" onerror="this.remove()">${c.img?'':'<i class="pl"></i>'}</span><span class="ct">${a[0]}</span>${ED?`<span class="fn">thumbs/${n}.jpg${c.img?'':' · videos/'+n+'.mp4'}</span>`:''}</button></div>`};
 let cur='all',nk;
 const nc=c=>innerWidth<=640?2:innerWidth<=1000?Math.min(3,c.cols):c.cols;
 /* susun kartu ke kolom terpendek supaya tinggi tiap kolom seimbang */
@@ -229,9 +268,9 @@ $('#tabs').onclick=e=>{const b=e.target.closest('.tab');if(!b||b.getAttribute('a
 g.onclick=e=>{const b=e.target.closest('.cb');if(b)show(CATS[b.dataset.c],+b.dataset.j)};
 function show(c,j){const a=[].concat(c.t[j]),u=a[1],n=c.id+'-'+p2(j+1),yt=u&&u.match(/(?:youtu\.be\/|v=)([\w-]{11})/),dr=u&&u.match(/drive\.google\.com\/file\/d\/([^/?]+)/);let el;
  const miss=f=>{mb.innerHTML=`<p class="em">${c.img?'Gambar':'Video'} belum ada.<br>Simpan file di <b>${f}</b></p>`};
- if(c.img){const f=u||`thumbs/${n}.jpg`;el=new Image();el.alt=a[0];el.onerror=()=>miss(f);el.src=f}
+ if(c.img){const f=u||`thumbs/${n}.jpg`;el=new Image();el.alt=a[0];el.onerror=()=>miss(f);el.src=U(f)}
  else if(yt||dr){el=document.createElement('iframe');el.allow='autoplay;fullscreen';el.allowFullscreen=true;el.src=yt?`https://www.youtube.com/embed/${yt[1]}?autoplay=1`:`https://drive.google.com/file/d/${dr[1]}/preview`}
- else{const f=u||`videos/${n}.mp4`,s=sz(c.t[j],c);el=document.createElement('video');el.controls=el.autoplay=el.playsInline=true;el.style.cssText=`width:min(100%,calc(76dvh*${s[0]/s[1]}));aspect-ratio:${s[0]}/${s[1]};margin:0 auto`;el.onerror=()=>miss(f);el.src=f}
+ else{const f=u||`videos/${n}.mp4`,s=sz(c.t[j],c);el=document.createElement('video');el.controls=el.autoplay=el.playsInline=true;el.style.cssText=`width:min(100%,calc(76dvh*${s[0]/s[1]}));aspect-ratio:${s[0]}/${s[1]};margin:0 auto`;el.onerror=()=>miss(f);el.src=U(f)}
  mb.replaceChildren(el);mt.textContent=a[0];md.hidden=false;document.body.style.overflow='hidden';mx.focus()}
 function hide(){md.hidden=true;mb.replaceChildren();document.body.style.overflow='';if(bv.classList.contains('ok'))bv.play().catch(()=>{})}
 md.onclick=e=>{if(e.target==md||e.target==mx)hide()};
@@ -240,7 +279,7 @@ addEventListener('keydown',e=>{if(e.key=='Escape'&&!md.hidden)hide()});
 /* video bumper di About */
 const bv=$('.vb video');
 /* kalau video bumper tidak ada di videos/bumper-opening.mp4, isi path/link mp4-nya di sini */
-const BUMPER='';
+const BUMPER=DBX['videos/mg-01.mp4']?U('videos/mg-01.mp4'):'';
 if(BUMPER){bv.replaceChildren();bv.src=BUMPER}
 bv.onloadedmetadata=()=>{bv.classList.add('ok');bv.parentNode.classList.add('ok');bv.play().catch(()=>{})};
 const vb=bv.parentNode;
